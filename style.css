@@ -56,26 +56,29 @@ body > p a {
   cursor: pointer;
 }
 .info-container {
-  width: 1080px;
+  width: 100%;
   margin: 20px auto 0;
   background-color: azure;
   padding: 20px;
   font-size: 24px;
   overflow: hidden;
   border: 2px solid #9d0fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .info-container .name {
-  float: left;
   width: 50%;
+  text-align: center;
 }
 .info-container .tries {
   float: right;
   width: 50%;
-  text-align: right;
+  text-align: center;
 }
 .memory-game-blocks {
   display: flex;
-  width: 1100px;
+  width: 100%;
   flex-wrap: wrap;
   margin: 20px auto;
 }
@@ -125,3 +128,22 @@ body > p a {
   transform: rotateY(180deg);
   pointer-events: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info-container .name {
+    width: 100%;
+  }
+  .info-container .tries {
+    float: right;
+    width: 100%;
+    text-align: center;
+  }
+}
+
